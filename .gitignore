@@ -6,3 +6,6 @@
 *.toc
 *.out
 *.pdf
+*.bcf
+*.dvi
+*.run.xml
