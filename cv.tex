@@ -1,0 +1,108 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{url}
+\usepackage{parskip} 	
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+\usepackage{fontawesome5}
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1}\vspace{-2pt}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\expSubheading}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} -- \textit{#2} & #3 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN RESUME
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+	\Huge{Suraj Sreeprakash Menon}                                              \\[7.5pt]
+	\href{https://github.com/surajsm60720}{\raisebox{-0.05\height}\faGithub\ surajsm60720} \ $|$ \
+	\href{https://www.linkedin.com/in/suraj-menon-a581ab305/}{\raisebox{-0.05\height}\faLinkedin\ Suraj Menon} \ $|$ \
+	% \href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
+	\href{mailto:surajsm218@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ surajsm218@gmail.com} \ $|$ \
+	\href{tel:+916364103939}{\raisebox{-0.05\height}\faMobile \ +91 6364103939} \\
+\end{tabularx}
+
+%-----------------------------------------------------------------------------------------
+%   PROJECTS
+%-----------------------------------------------------------------------------------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\expSubheading
+{TravelEase}{Next.js, Supabase, Google Maps API}{\href{http://travel-ease-mocha.vercel.app}{Website}}
+\resumeItemListStart
+\resumeItem
+{Developed an interactive trip management platform with real-time expense tracking and mapping.}
+\resumeItem
+{Integrated a dynamic mapping interface using Google Maps API, enabling users to filter and explore locations.}
+\resumeItem
+{Optimized the performance with efficient API calls and Supabase authentication and database integration.}
+\resumeItemListEnd
+
+
+\expSubheading
+{CIE Marks Calculator}{Kotlin}{\href{http://nammalakes.github.io/dashboard}{GitHub}}
+\resumeItemListStart
+\resumeItem
+{Developed an Android app for quick and accurate CIE (Continuous Internal Evaluation) marks calculation}
+\resumeItem
+{Integrated Apache POI library for Excel sheet parsing and data extraction, enabling users to upload spreadsheets and calculate marks.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+\end{document}
