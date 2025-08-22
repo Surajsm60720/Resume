@@ -1,10 +1,10 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage{url}
 \usepackage{parskip} 	
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[top=0.4in, bottom=0.4in, left=0.6in, right=0.6in]{geometry}
 \usepackage{tabularx}
 \usepackage{enumitem}
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
@@ -16,7 +16,33 @@
 \usepackage{multicol}
 \usepackage{multirow}
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titlespacing{\section}{0pt}{9pt}{7pt}
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+\usepackage{fontawesome5}
+
+% Reduce line spacing
+\linespread{1.02}
+% Reduce paragraph spacing
+\setlength{\parskip}{3.5pt}
+% Reduce spacing in tabular environments
+\renewcommand{\arraystretch}{1.02}
+\usepackage[top=0.4in, bottom=0.4in, left=0.6in, right=0.6in]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\usepackage{supertabular}
+\usepackage{tabularx}
+\setlength{\fullcollw}{0.47\textwidth}
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{8.5pt}{6.5pt}
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
@@ -27,33 +53,33 @@
 
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1}\vspace{-2pt}
+    {#1}\vspace{1pt}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-1pt}
 }
 
 \newcommand{\expSubheading}[3]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} -- \textit{#2} & #3 \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, itemsep=3.8pt, parsep=0pt, topsep=4.8pt, partopsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=2.8pt, parsep=0pt, topsep=4.3pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-0.5pt}}
 
 %----------------------------------------------------------------------------------------
 %	BEGIN RESUME
@@ -69,7 +95,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-	\Huge{Suraj Sreeprakash Menon}                                              \\[7.5pt]
+	\Huge{Suraj Sreeprakash Menon}                                              \\[7pt]
 	\href{https://github.com/surajsm60720}{\raisebox{-0.05\height}\faGithub\ surajsm60720} \ $|$ \
 	\href{https://www.linkedin.com/in/suraj-menon-a581ab305/}{\raisebox{-0.05\height}\faLinkedin\ Suraj Menon} \ $|$ \
 	% \href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
@@ -99,11 +125,33 @@
 
 \section{Skills}
 
-\textbf{Languages:} Python, JavaScript, SQL, Bash, Java, Kotlin, Dart
+\textbf{Languages:} Python, JavaScript, SQL, Bash, Java, Dart
 
 \textbf{Frameworks/Technologies:} Next.js, React, Supabase, Flutter, Git
 
-\textbf{Developer Tools:} GitHub, Docker
+\textbf{Developer Tools:} GitHub, Docker, VS Code, Postman
+
+
+%----------------------------------------------------------------------------------------
+%   EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \expSubheading
+      {Frontend Developer Intern}{BharatCrest Pvt. Ltd.}{June 2025 - August 2025}
+      \resumeItemListStart
+        \resumeItem
+          {Helped build the frontend for 2 major projects that are successfully deployed and are in production.}
+          \resumeItem
+          {Designed and built the website HRMatcher using Django framework, which helps companies find the right candidates based on their requirements using AI.}
+          \resumeItem
+          {Collaborated with a team of 3 developers to build the ProfitPal application using React and Python, which helps restaurant owners and staff manage their inventory and sales.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
 
 
 %-----------------------------------------------------------------------------------------
@@ -126,32 +174,28 @@
 {Optimized performance by streamlining API calls and integrating Supabase for authentication and database management.}
 \resumeItemListEnd
 
-\vspace{1em}
+\vspace{1.0em}
 
 \expSubheading
-{CIE Marks Calculator}{Kotlin}{\href{https://github.com/Surajsm60720/CIEMarksCalculator}{GitHub}}
+{NammaLakes}{FastAPI, RabbitMQ, Vite+React, Recharts, ML (Isolation Forest)}{\href{http://nammalakes.github.io/dashboard}{Demo}}
 \resumeItemListStart
 \resumeItem
-{Developed a user-friendly mobile application to calculate Continuous Internal Evaluation (CIE) marks efficiently.}
+{NammaLakes is a distributed IoT-based lake monitoring system. It was a team project, where I developed the main website using Vite and React.}
 \resumeItem
-{Integrated Apache POI library for Excel sheet parsing and data extraction, enabling users to upload spreadsheets and calculate marks.}
+{Helped in designing and developing the dashboard to visualize the data collected from the sensors using Recharts library.}
 \resumeItem
-{Implemented an enhanced user interface using Material UI to providing a seamless experience.}
-\resumeItem
-{Optimized the calculation logic to provide instant and error-free results based on user inputs.}
-\resumeItem
-{Integrated the local storage access feature to access the spreadsheets from the device.}
+{Optimized the dashboard performance by implementing efficient state management and lazy loading techniques.}
 \resumeItemListEnd
 
-\vspace{1em}
+\vspace{1.0em}
 
 \expSubheading
 {Linux Starter Pack}{Python, Next.js, Tailwind}{\href{linuxstarterpack.vercel.app}{Website}}
 \resumeItemListStart
 \resumeItem
-{Developed a user-friendly terminal user interface (TUI) for installing packages and softwares based on the user's Linux Distribution.}
+{Created a user-friendly terminal user interface (TUI) for installing packages and softwares based on the user's Linux Distribution.}
 \resumeItem
-{Integrated Textual Python library to implement the TUI and used Bash scripting for saving the list of packages to be installed.}
+{Learnt the Textual Python library to implement the TUI and used Bash scripting for saving the list of packages to be installed.}
 \resumeItem
 {Optimized the installation process by proper recognition of fastest mirrors to significantly reduce installation time.}
 \resumeItem
@@ -170,6 +214,8 @@
 \resumeSubHeadingListStart
 \resumeItem
 {Flutter and Dart\textendash The Complete Guide [2024 Edition]}{\hfill\href{https://www.udemy.com/certificate/UC-f97e04ad-6a49-41bc-9788-bf93ee049e9e/}{Certificate}}
+\resumeItem
+{Data Mining}{\hfill\href{https://media.licdn.com/dms/image/v2/D4E2DAQFYGb5dmuCmwQ/profile-treasury-document-cover-images_480/B4EZYfsjdGG0BA-/0/1744288501049?e=1756447200&v=beta&t=E3zYyyewg8Xug3hV-suRxd51wj3FdEl6OB2m1-Q298w}{Certificate}}
 \resumeSubHeadingListEnd
 
 \end{document}
