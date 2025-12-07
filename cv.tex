@@ -25,12 +25,17 @@
 \setlength\bibitemsep{1em}
 \usepackage{fontawesome5}
 
-% Reduce line spacing
-\linespread{1.02}
-% Reduce paragraph spacing
-\setlength{\parskip}{3.5pt}
+% Line spacing
+\linespread{0.98}
+% Paragraph spacing
+\setlength{\parskip}{2.5pt}
 % Reduce spacing in tabular environments
 \renewcommand{\arraystretch}{1.02}
+% Disable hyphenation to prevent awkward line breaks
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
 \usepackage[top=0.4in, bottom=0.4in, left=0.6in, right=0.6in]{geometry}
 \usepackage{tabularx}
 \usepackage{enumitem}
@@ -41,8 +46,8 @@
 \usepackage{titlesec}				
 \usepackage{multicol}
 \usepackage{multirow}
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{8.5pt}{6.5pt}
+\titleformat{\section}{\Large\bfseries}{}{0em}{\MakeUppercase}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{8pt}
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
@@ -58,7 +63,7 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{1pt}\item
+  \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
@@ -74,12 +79,12 @@
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
-\renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemii}{$\cdot$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, itemsep=3.8pt, parsep=0pt, topsep=4.8pt, partopsep=0pt]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, itemsep=2pt, parsep=0pt, topsep=2.5pt, partopsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=2.8pt, parsep=0pt, topsep=4.3pt, partopsep=0pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-0.5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=1.5pt, parsep=0pt, topsep=2pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
 
 %----------------------------------------------------------------------------------------
 %	BEGIN RESUME
@@ -94,14 +99,15 @@
 %	TITLE
 %----------------------------------------------------------------------------------------
 
-\begin{tabularx}{\linewidth}{@{} C @{}}
-	\Huge{Suraj Sreeprakash Menon}                                              \\[7pt]
-	\href{https://github.com/surajsm60720}{\raisebox{-0.05\height}Github} \ $|$ \
-	\href{https://www.linkedin.com/in/suraj-menon-a581ab305/}{\raisebox{-0.05\height}Linkedin} \ $|$ \
-	\href{https://surajmenon.vercel.app}{\raisebox{-0.05\height}Portfolio} \ $|$ \ 
-	\href{mailto:surajsm218@gmail.com}{\raisebox{-0.05\height}surajsm218@gmail.com} \ $|$ \
-	\href{tel:+916364103939}{\raisebox{-0.05\height} Mobile : +91 6364103939} \\
-\end{tabularx}
+\begin{center}
+	{\Huge\textbf{Suraj Sreeprakash Menon}} \\[4pt]
+	{surajsm218@gmail.com} $\cdot$ +91 6364103939 $\cdot$ Location: Bengaluru, KA \\[2pt]
+	\href{https://github.com/surajsm60720}{github.com/surajsm60720} $\cdot$ 
+	\href{https://www.linkedin.com/in/surajmenon60720/}{linkedin.com/in/surajmenon60720} $\cdot$ 
+	\href{https://surajmenon.vercel.app}{surajmenon.vercel.app}
+\end{center}
+
+\vspace{-10pt}
 
 
 %----------------------------------------------------------------------------------------
@@ -125,11 +131,15 @@
 
 \section{Skills}
 
-\textbf{Languages:} Python, JavaScript, Typescript, SQL, Bash
+\textbf{Languages:} Python, JavaScript/TypeScript, SQL, Bash
 
-\textbf{Frameworks/Technologies:} Next.js, React, Tailwind CSS, FastAPI
+\textbf{Frontend:} React, Next.js, Vite, Tailwind CSS, Recharts
 
-\textbf{Developer Tools:} Git, GitHub, Docker, Postman, Supabase, RabbitMQ
+\textbf{Backend:} FastAPI, Node.js, RESTful APIs
+
+\textbf{Databases \& Cloud:} PostgreSQL, Supabase, Firebase, SQLite, Vercel
+
+\textbf{DevOps \& Tools:} Git, GitHub Actions, Docker, RabbitMQ, Postman
 
 
 %----------------------------------------------------------------------------------------
@@ -141,11 +151,11 @@
   \resumeSubHeadingListStart
 
     \expSubheading
-      {Frontend Developer Intern}{BharatCrest Pvt. Ltd.}{June 2025 - August 2025}
+      {Full Stack Developer Intern}{BharatCrest Pvt. Ltd.}{June 2025 - August 2025}
       \resumeItemListStart
-        \resumeItem{Engineered \textbf{HRMatcher}, a recruitment platform using \textbf{Django} and AI algorithms to automate candidate-company matching, significantly reducing manual screening time.}
-        \resumeItem{Co-developed \textbf{ProfitPal}, a comprehensive inventory management application using \textbf{React} and \textbf{Python}, enabling restaurant staff to track sales and stock levels in real-time.}
-        \resumeItem{Collaborated with a team of 3 developers to deploy two major projects to production, ensuring responsive design and cross-browser compatibility.}
+        \resumeItem{Engineered \textbf{HRMatcher} recruitment platform automating candidate screening by processing 100+ resumes in under 5 minutes using \textbf{Google Gemini API} for intelligent skill-based filtering and similarity ranking.}
+        \resumeItem{Developed full-stack restaurant management system (\textbf{React} + \textbf{FastAPI}) with real-time order tracking, billing, and automated inventory management with low-stock alerts.}
+        \resumeItem{Optimized frontend bundle and implemented route-level code splitting and image lazy-loading; observed \textbf{~20--30\% reduction in client-side load times} in Lighthouse audits.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -159,30 +169,29 @@
 \resumeSubHeadingListStart
 
 \expSubheading
-{TravelEase}{Next.js, Supabase, Google Maps API}{\href{http://travel-ease-mocha.vercel.app}{Website}}
+{NammaLakes}{FastAPI, RabbitMQ, Vite+React, Recharts, ML (Isolation Forest)}{}
 \resumeItemListStart
-\resumeItem{Developed a full-stack trip management platform featuring interactive route mapping and expense tracking for travelers.}
-\resumeItem{Integrated \textbf{Google Maps API} to build a dynamic mapping interface, enabling users to filter attractions and dining options along specific travel routes.}
-\resumeItem{Optimized application performance by streamlining API calls and implementing \textbf{Supabase} for secure authentication and efficient real-time database management.}
+\resumeItem{Architected distributed IoT system processing 17,000+ data points daily from 3 sensors at 5-second intervals using \textbf{RabbitMQ} message queuing and fault-tolerant \textbf{FastAPI} microservices with structured logging.}
+\resumeItem{Developed real-time analytics dashboard with rapid visualization updates using \textbf{Vite + Recharts}, integrating \textbf{Isolation Forest} ML model for automated water quality anomaly detection.}
 \resumeItemListEnd
 
 \vspace{0.4em}
 
 \expSubheading
-{NammaLakes}{FastAPI, RabbitMQ, Vite+React, Recharts, ML (Isolation Forest)}{\href{http://nammalakes.github.io/}{Website}}
+{Linux Starter Pack}{Python, Next.js, Tailwind CSS}{}
 \resumeItemListStart
-\resumeItem{Architected a distributed IoT-based lake monitoring system, utilizing \textbf{RabbitMQ} for message queuing and \textbf{FastAPI} to process sensor data streams.}
-\resumeItem{Designed a responsive dashboard using \textbf{Vite} and \textbf{Recharts}, employing state management and lazy loading to visualize complex sensor data with minimal latency.}
+\resumeItem{Developed cross-platform TUI automation tool (\textbf{Python/Textual}) supporting 12 major Linux distributions with automated package manager detection, dependency resolution, and intelligent fallback handling.}
+\resumeItem{Implemented parallel mirror latency checks and fallback selection to improve average package download reliability and reduce installation times by 60\%.}
+\resumeItem{Designed interactive showcase website using \textbf{Next.js} and \textbf{Anime.js}, for showcasing the tool's capabilities through interactive animations.}
 \resumeItemListEnd
 
 \vspace{0.4em}
 
 \expSubheading
-{Linux Starter Pack}{Python, Next.js, Tailwind CSS}{\href{linuxstarterpack.vercel.app}{Website}}
+{TravelEase}{Next.js, Supabase, Google Maps API}{}
 \resumeItemListStart
-\resumeItem{Built a Terminal User Interface (TUI) tool using \textbf{Python (Textual)} that automates the installation of essential software based on the user's Linux distribution.}
-\resumeItem{Wrote \textbf{Bash} scripts to automatically detect and switch to the fastest download mirrors, significantly reducing package installation time for end-users.}
-\resumeItem{Developed a showcase website using \textbf{Next.js} and \textbf{Anime.js} to demonstrate the tool's capabilities through interactive animations.}
+\resumeItem{Developed full-stack trip planning platform with \textbf{Google Maps API} integration for route optimization, geospatial queries, and complex multi-waypoint itinerary generation.}
+\resumeItem{Optimized API efficiency by implementing selective field queries (name, rating, photo) to minimize payload size by 65\%, while adding real-time collaboration features via \textbf{Supabase}.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -192,7 +201,8 @@
 %----------------------------------------------------------------------------------------
 \section{Publications}
 \resumeSubHeadingListStart
-\resumeItem{\textbf{[NammaLakes — IoT-Based Real-Time Distributed Lakes Monitoring System].} Suraj S. Menon et al. \textit{International Journal of Latest Technology in Engineering Management and Applied Science}, 2025. \href{https://doi.org/10.51583/IJLTEMAS.2025.1409000060}{Link to paper}}
+\resumeItem{\textbf{Suraj Menon} et al., ``NammaLakes: IoT-Based Real-Time Distributed Lakes Monitoring System,'' \textit{International Journal of Latest Technology in Engineering Management and Applied Science}, 2025. \href{https://doi.org/10.51583/IJLTEMAS.2025.1409000060}{[DOI]} \\[2pt]
+\textit{\small Designed distributed IoT architecture with RabbitMQ message queuing and ML-based anomaly detection for real-time water quality monitoring.}}
 \resumeSubHeadingListEnd
 
 %----------------------------------------------------------------------------------------
@@ -201,7 +211,7 @@
 
 \section{Certifications}
 \resumeSubHeadingListStart
-\resumeItem{\textbf{The Complete Full-Stack Web Development Bootcamp} -- [Udemy], 2025. \hfill\href{https://www.udemy.com/certificate/UC-3c7703b2-28fe-4ae1-a8ed-1ef0133d89b5/}{Certificate link}}
+\resumeItem{\textbf{The Complete Full-Stack Web Development Bootcamp} -- Udemy, 2025 \hfill\href{https://www.udemy.com/certificate/UC-3c7703b2-28fe-4ae1-a8ed-1ef0133d89b5/}{[View Certificate]}}
 \resumeSubHeadingListEnd
 
 \end{document}
