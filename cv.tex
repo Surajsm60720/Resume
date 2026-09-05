@@ -1,13 +1,13 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,10pt]{article}
 \usepackage{url}
 \usepackage{parskip} 	
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[top=0.4in, bottom=0.4in, left=0.6in, right=0.6in]{geometry}
+\usepackage[top=0.3in, bottom=0.3in, left=0.5in, right=0.5in]{geometry}
 \usepackage{tabularx}
 \usepackage{enumitem}
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 \usepackage{supertabular}
 \usepackage{tabularx}
 \newlength{\fullcollw}
@@ -15,8 +15,8 @@
 \usepackage{titlesec}				
 \usepackage{multicol}
 \usepackage{multirow}
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{9pt}{7pt}
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{4pt}
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
@@ -26,9 +26,9 @@
 \usepackage{fontawesome5}
 
 % Line spacing
-\linespread{0.98}
+\linespread{1.0}
 % Paragraph spacing
-\setlength{\parskip}{2.5pt}
+\setlength{\parskip}{0.8pt}
 % Reduce spacing in tabular environments
 \renewcommand{\arraystretch}{1.02}
 % Disable hyphenation to prevent awkward line breaks
@@ -36,18 +36,18 @@
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \exhyphenpenalty=10000
-\usepackage[top=0.4in, bottom=0.4in, left=0.6in, right=0.6in]{geometry}
+\usepackage[top=0.3in, bottom=0.3in, left=0.5in, right=0.5in]{geometry}
 \usepackage{tabularx}
 \usepackage{enumitem}
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newcolumntype{C}{>{\centering\arraybackslash}X}
 \usepackage{supertabular}
 \usepackage{tabularx}
 \setlength{\fullcollw}{0.47\textwidth}
 \usepackage{titlesec}				
 \usepackage{multicol}
 \usepackage{multirow}
-\titleformat{\section}{\Large\bfseries}{}{0em}{\MakeUppercase}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{8pt}
+\titleformat{\section}{\large\bfseries}{}{0em}{\MakeUppercase}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{4pt}
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
@@ -58,7 +58,7 @@
 
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1}\vspace{1pt}
+    {#1}\vspace{0pt}
   }
 }
 
@@ -79,12 +79,14 @@
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
+\newcommand{\entryGap}{\vspace{0.45em}}
+
 \renewcommand{\labelitemii}{$\cdot$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, itemsep=2pt, parsep=0pt, topsep=2.5pt, partopsep=0pt]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*, itemsep=0.5pt, parsep=0pt, topsep=1pt, partopsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=1.5pt, parsep=0pt, topsep=2pt, partopsep=0pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0.5pt, parsep=0pt, topsep=1pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
 
 %----------------------------------------------------------------------------------------
 %	BEGIN RESUME
@@ -107,7 +109,7 @@
 	\href{https://surajmenon.vercel.app}{surajmenon.vercel.app}
 \end{center}
 
-\vspace{-10pt}
+\vspace{-3pt}
 
 
 %----------------------------------------------------------------------------------------
@@ -137,9 +139,10 @@
 
 \textbf{Backend:} FastAPI, Node.js, RESTful APIs
 
-\textbf{Databases \& Cloud:} PostgreSQL, Supabase, Firebase, SQLite, Vercel
+\textbf{Databases \& Cloud:} PostgreSQL, Amazon Redshift, OpenSearch, Supabase, Firebase, SQLite, Vercel
 
-\textbf{DevOps \& Tools:} Git, GitHub Actions, Docker, RabbitMQ, Postman
+\textbf{DevOps \& Tools:} Git, GitHub Actions, Docker, RabbitMQ, Postman, Wireshark, Grafana, QuickSight, n8n, Jira, Confluence
+
 
 
 %----------------------------------------------------------------------------------------
@@ -157,13 +160,27 @@
         \resumeItem{Developed full-stack restaurant management system (\textbf{React} + \textbf{FastAPI}) with real-time order tracking, billing, and automated inventory management with low-stock alerts.}
         \resumeItem{Optimized frontend bundle and implemented route-level code splitting and image lazy-loading; observed \textbf{~20--30\% reduction in client-side load times} in Lighthouse audits.}
       \resumeItemListEnd
-    
+
+    \entryGap
+
     \expSubheading
-      {Full Stack Developer Intern}{Jabsz Gaming Studios}{October 2025 - Present}
+      {Full Stack Developer Intern}{Jabsz Gaming Studios}{October 2025 - February 2026}
       \resumeItemListStart
         \resumeItem{Led a full UI/UX redesign of the company website, fixing cross-page UI issues, adding animations, and establishing a consistent visual theme across all pages.}
         \resumeItem{Migrated the production frontend from \textbf{React} to \textbf{Next.js (App Router)}, integrating legacy JavaScript and global CSS assets using custom Next.js configuration and build tooling.}
+        \resumeItem{Migrated the production database from \textbf{Firebase} to \textbf{Supabase}, porting existing data into a relational \textbf{PostgreSQL} schema and rewriting all client-side data access against the new SDK.}
         \resumeItem{Improved website performance and SEO by converting all images to \textbf{WebP} and leveraging \textbf{next/image}, increasing Lighthouse scores from \textbf{~50 to ~90}.}
+      \resumeItemListEnd
+
+    \entryGap
+
+    \expSubheading
+      {Forward Deployed Engineer Intern}{Plivo}{February 2026 - Present}
+      \resumeItemListStart
+        \resumeItem{Built and shipped an internal automation in \textbf{Python} and \textbf{n8n}, now used daily by the support team, that queries \textbf{Redshift} on ticket creation for a customer's recent call and message history and posts an \textbf{LLM}-generated summary, eliminating manual log lookup before triage.}
+        \resumeItem{Debugged production voice and messaging failures across \textbf{Plivo Voice (API/XML)}, SMS, WhatsApp, Verify, Zentrunk SIP trunking, and PHLO, driving root cause analysis with application logs, \textbf{OpenSearch}, \textbf{Wireshark} PCAP analysis, and \textbf{Postman} request replay.}
+        \resumeItem{Instrumented customer traffic monitoring in \textbf{Grafana}, tracking calls-per-second and concurrency trends to catch capacity and rate-limit issues before they surfaced as outages.}
+        \resumeItem{Primary technical point of contact for enterprise customers across \textbf{APAC, EMEA, and the US}, resolving \textbf{200+ tickets/month} and partnering with Engineering, DevOps, and Product to close platform bugs, feature requests, and outages.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -179,11 +196,11 @@
 \expSubheading
 {NammaLakes}{FastAPI, RabbitMQ, Vite+React, Recharts, ML (Isolation Forest)}{}
 \resumeItemListStart
-\resumeItem{Architected distributed IoT system processing 17,000+ data points daily from 3 sensors at 5-second intervals using \textbf{RabbitMQ} message queuing and fault-tolerant \textbf{FastAPI} microservices with structured logging.}
+\resumeItem{Architected distributed IoT system ingesting continuous telemetry from 3 sensors at 5-second intervals using \textbf{RabbitMQ} message queuing and fault-tolerant \textbf{FastAPI} microservices with structured logging.}
 \resumeItem{Developed real-time analytics dashboard with rapid visualization updates using \textbf{Vite + Recharts}, integrating \textbf{Isolation Forest} ML model for automated water quality anomaly detection.}
 \resumeItemListEnd
 
-\vspace{0.4em}
+\entryGap
 
 \expSubheading
 {Linux Starter Pack}{Python, Next.js, Tailwind CSS}{}
@@ -192,7 +209,7 @@
 \resumeItem{Implemented parallel mirror latency checks and fallback selection to improve average package download reliability and reduce installation times by 60\%.}
 \resumeItemListEnd
 
-\vspace{0.4em}
+
 \resumeSubHeadingListEnd
 
 %----------------------------------------------------------------------------------------
@@ -210,7 +227,7 @@
 
 \section{Certifications}
 \resumeSubHeadingListStart
-\resumeItem{\textbf{The Complete Full-Stack Web Development Bootcamp} -- Udemy, 2025 \hfill\href{https://www.udemy.com/certificate/UC-3c7703b2-28fe-4ae1-a8ed-1ef0133d89b5/}{[View Certificate]}}
+\resumeItem{\textbf{The Complete Full-Stack Web Development Bootcamp} -- Udemy, 2025  -- \href{https://www.udemy.com/certificate/UC-3c7703b2-28fe-4ae1-a8ed-1ef0133d89b5/}{[View Certificate]}}
 \resumeSubHeadingListEnd
 
 \end{document}
