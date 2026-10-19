@@ -1,6 +1,6 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage{url}
-\usepackage{parskip} 	
+\usepackage{parskip}
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
@@ -9,20 +9,16 @@
 \usepackage{enumitem}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \usepackage{supertabular}
-\usepackage{tabularx}
 \newlength{\fullcollw}
 \setlength{\fullcollw}{0.47\textwidth}
-\usepackage{titlesec}				
+\usepackage{titlesec}
 \usepackage{multicol}
 \usepackage{multirow}
-\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\large\bfseries}{}{0em}{\MakeUppercase}[\titlerule]
 \titlespacing{\section}{0pt}{6pt}{4pt}
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
 \usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
 \usepackage{fontawesome5}
 
 % Line spacing
@@ -36,25 +32,6 @@
 \emergencystretch=\maxdimen
 \hyphenpenalty=10000
 \exhyphenpenalty=10000
-\usepackage[top=0.3in, bottom=0.3in, left=0.5in, right=0.5in]{geometry}
-\usepackage{tabularx}
-\usepackage{enumitem}
-\newcolumntype{C}{>{\centering\arraybackslash}X}
-\usepackage{supertabular}
-\usepackage{tabularx}
-\setlength{\fullcollw}{0.47\textwidth}
-\usepackage{titlesec}				
-\usepackage{multicol}
-\usepackage{multirow}
-\titleformat{\section}{\large\bfseries}{}{0em}{\MakeUppercase}[\titlerule]
-\titlespacing{\section}{0pt}{6pt}{4pt}
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-\usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
-\usepackage{fontawesome5}
 
 \newcommand{\resumeItem}[1]{
   \item\small{
@@ -103,131 +80,132 @@
 
 \begin{center}
 	{\Huge\textbf{Suraj Sreeprakash Menon}} \\[4pt]
-	{surajsm218@gmail.com} $\cdot$ +91 6364103939 $\cdot$ Location: Bengaluru, KA \\[2pt]
-	\href{https://github.com/surajsm60720}{github.com/surajsm60720} $\cdot$ 
-	\href{https://www.linkedin.com/in/surajmenon60720/}{linkedin.com/in/surajmenon60720} $\cdot$ 
+	{surajsm218@gmail.com} $\cdot$ +91 6364103939 $\cdot$ Bengaluru, Karnataka, India \\[2pt]
+	\href{https://github.com/surajsm60720}{github.com/surajsm60720} $\cdot$
+	\href{https://www.linkedin.com/in/surajmenon60720/}{linkedin.com/in/surajmenon60720} $\cdot$
 	\href{https://surajmenon.vercel.app}{surajmenon.vercel.app}
 \end{center}
 
 \vspace{-3pt}
 
-
 %----------------------------------------------------------------------------------------
-%	  EDUCATION
+%   EXPERIENCE  (reverse chronological -- best card first)
 %----------------------------------------------------------------------------------------
-
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Dayananda Sagar College of Engineering}{Bengaluru, KA}
-      {B.E in Information Science (VTU);  CGPA: 8.9}{2022 - 2026}
-    \resumeSubheading
-      {Christ PU College}{Bengaluru, KA}
-      {State Board;  88\%}{2020 - 2022}
-  \resumeSubHeadingListEnd
-
-
-%----------------------------------------------------------------------------------------
-%	  SKILLS
-%----------------------------------------------------------------------------------------
-
-\section{Skills}
-
-\textbf{Languages:} Python, JavaScript/TypeScript, SQL, Bash
-
-\textbf{Frontend:} React, Next.js, Vite, Tailwind CSS, Recharts
-
-\textbf{Backend:} FastAPI, Node.js, RESTful APIs
-
-\textbf{Databases \& Cloud:} PostgreSQL, Amazon Redshift, OpenSearch, Supabase, Firebase, SQLite, Vercel
-
-\textbf{DevOps \& Tools:} Git, GitHub Actions, Docker, RabbitMQ, Postman, Wireshark, Grafana, QuickSight, n8n, Jira, Confluence
-
-
-
-%----------------------------------------------------------------------------------------
-%   EXPERIENCE
-%----------------------------------------------------------------------------------------
-
 
 \section{Experience}
   \resumeSubHeadingListStart
 
     \expSubheading
-      {Full Stack Developer Intern}{BharatCrest Pvt. Ltd.}{June 2025 - August 2025}
+      {Forward Deployed Engineer Intern}{Plivo}{Feb 2026 -- Present}
       \resumeItemListStart
-        \resumeItem{Engineered \textbf{HRMatcher} recruitment platform automating candidate screening by processing 100+ resumes in under 5 minutes using \textbf{Google Gemini API} for intelligent skill-based filtering and similarity ranking.}
-        \resumeItem{Developed full-stack restaurant management system (\textbf{React} + \textbf{FastAPI}) with real-time order tracking, billing, and automated inventory management with low-stock alerts.}
-        \resumeItem{Optimized frontend bundle and implemented route-level code splitting and image lazy-loading; observed \textbf{~20--30\% reduction in client-side load times} in Lighthouse audits.}
-      \resumeItemListEnd
-
-    \entryGap
-
-    \expSubheading
-      {Full Stack Developer Intern}{Jabsz Gaming Studios}{October 2025 - February 2026}
-      \resumeItemListStart
-        \resumeItem{Led a full UI/UX redesign of the company website, fixing cross-page UI issues, adding animations, and establishing a consistent visual theme across all pages.}
-        \resumeItem{Migrated the production frontend from \textbf{React} to \textbf{Next.js (App Router)}, integrating legacy JavaScript and global CSS assets using custom Next.js configuration and build tooling.}
-        \resumeItem{Migrated the production database from \textbf{Firebase} to \textbf{Supabase}, porting existing data into a relational \textbf{PostgreSQL} schema and rewriting all client-side data access against the new SDK.}
-        \resumeItem{Improved website performance and SEO by converting all images to \textbf{WebP} and leveraging \textbf{next/image}, increasing Lighthouse scores from \textbf{~50 to ~90}.}
-      \resumeItemListEnd
-
-    \entryGap
-
-    \expSubheading
-      {Forward Deployed Engineer Intern}{Plivo}{February 2026 - Present}
-      \resumeItemListStart
-        \resumeItem{Built and shipped an internal automation in \textbf{Python} and \textbf{n8n}, now used daily by the support team, that queries \textbf{Redshift} on ticket creation for a customer's recent call and message history and posts an \textbf{LLM}-generated summary, eliminating manual log lookup before triage.}
-        \resumeItem{Debugged production voice and messaging failures across \textbf{Plivo Voice (API/XML)}, SMS, WhatsApp, Verify, Zentrunk SIP trunking, and PHLO, driving root cause analysis with application logs, \textbf{OpenSearch}, \textbf{Wireshark} PCAP analysis, and \textbf{Postman} request replay.}
-        \resumeItem{Instrumented customer traffic monitoring in \textbf{Grafana}, tracking calls-per-second and concurrency trends to catch capacity and rate-limit issues before they surfaced as outages.}
+        \resumeItem{Shipped an \textbf{n8n} + \textbf{Python} automation that pulls a customer's call and message history from Redshift on ticket creation and posts an LLM summary to the thread, removing the manual log lookup that preceded every triage (\textbf{$\sim$20 hrs/month} of support time).}
+        \resumeItem{Debugged production voice and messaging failures across Plivo Voice, SMS, WhatsApp, Verify, Zentrunk SIP trunking, and PHLO, driving root cause analysis with application logs, \textbf{OpenSearch}, \textbf{Wireshark} PCAPs, and Postman replay.}
+        \resumeItem{Instrumented customer traffic monitoring in \textbf{Grafana} (calls-per-second, concurrency trends) to catch capacity and rate-limit issues before they surfaced as outages.}
         \resumeItem{Primary technical point of contact for enterprise customers across \textbf{APAC, EMEA, and the US}, resolving \textbf{200+ tickets/month} and partnering with Engineering, DevOps, and Product to close platform bugs, feature requests, and outages.}
+      \resumeItemListEnd
+
+    \entryGap
+
+    \expSubheading
+      {Full Stack Developer Intern}{Jabsz Gaming Studios}{Oct 2025 -- Feb 2026}
+      \resumeItemListStart
+        \resumeItem{Led a full UI/UX redesign of the company website, fixing cross-page inconsistencies and establishing one consistent visual theme across all pages.}
+        \resumeItem{Migrated the production frontend from \textbf{React} to \textbf{Next.js (App Router)}, integrating legacy JavaScript and global CSS assets via custom Next.js configuration and build tooling.}
+        \resumeItem{Migrated the production database from \textbf{Firebase} to \textbf{Supabase}, porting data into a relational PostgreSQL schema and rewriting all client-side data access against the new SDK.}
+        \resumeItem{Improved performance and SEO by converting all images to WebP and adopting \texttt{next/image}, raising Lighthouse scores from \textbf{$\sim$50 to $\sim$90}.}
+      \resumeItemListEnd
+
+    \entryGap
+
+    \expSubheading
+      {Full Stack Developer Intern}{BharatCrest Pvt. Ltd.}{Jun 2025 -- Aug 2025}
+      \resumeItemListStart
+        \resumeItem{Built \textbf{HRMatcher}, a recruitment platform that screens candidates with skill-based filtering and similarity ranking via the Google Gemini API, processing 100+ resumes in under 5 minutes.}
+        \resumeItem{Developed a full-stack restaurant management system (\textbf{React} + \textbf{FastAPI}) with real-time order tracking, billing, and automated inventory management with low-stock alerts.}
+        \resumeItem{Added route-level code splitting and image lazy-loading, cutting client-side load times \textbf{20--30\%} in Lighthouse audits.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-
-%-----------------------------------------------------------------------------------------
-%   PROJECTS
-%-----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+%   PROJECTS  (the three strongest artifacts, not the safest ones)
+%----------------------------------------------------------------------------------------
 
 \section{Projects}
 \resumeSubHeadingListStart
 
 \expSubheading
-{NammaLakes}{FastAPI, RabbitMQ, Vite+React, Recharts, ML (Isolation Forest)}{}
+{Tether}{Swift, SwiftUI, Network.framework, CryptoKit}{}
 \resumeItemListStart
-\resumeItem{Architected distributed IoT system ingesting continuous telemetry from 3 sensors at 5-second intervals using \textbf{RabbitMQ} message queuing and fault-tolerant \textbf{FastAPI} microservices with structured logging.}
-\resumeItem{Developed real-time analytics dashboard with rapid visualization updates using \textbf{Vite + Recharts}, integrating \textbf{Isolation Forest} ML model for automated water quality anomaly detection.}
+\resumeItem{Mac host + iPhone client for browsing shared folders, sending files, running a scoped terminal, and driving allowlisted coding agents (Claude Code, Cursor, Codex) as a live PTY -- locally, with no account and no cloud.}
+\resumeItem{Pairs via QR with a Keychain-held device key; every session is ChaChaPoly-encrypted over \textbf{Network.framework} with zero third-party networking or crypto libraries. Shipped as v3.3 with public release notes.}
 \resumeItemListEnd
 
 \entryGap
 
 \expSubheading
-{Linux Starter Pack}{Python, Next.js, Tailwind CSS}{}
+{AI Test Case Generator}{FastAPI, Next.js, Kafka, PostgreSQL, MinIO, Prometheus/Grafana}{}
 \resumeItemListStart
-\resumeItem{Developed cross-platform TUI automation tool (\textbf{Python/Textual}) supporting 12 major Linux distributions with automated package manager detection, dependency resolution, and intelligent fallback handling.}
-\resumeItem{Implemented parallel mirror latency checks and fallback selection to improve average package download reliability and reduce installation times by 60\%.}
+\resumeItem{Built an LLM system that turns SRS documents and UI screenshots into structured test cases, with a Next.js frontend and a FastAPI REST backend.}
+\resumeItem{Kafka background workers decouple upload from generation; MinIO stores source documents, PostgreSQL tracks job state, and Prometheus + Grafana monitor queue depth and worker health.}
 \resumeItemListEnd
 
+\entryGap
+
+\expSubheading
+{NanoPrune Canvas}{PyTorch, ONNX, FastAPI, Next.js, React Flow}{}
+\resumeItemListStart
+\resumeItem{Browser toolkit that simulates magnitude pruning (FP32 $\rightarrow$ INT4) and post-training quantization before edge deployment, parsing PyTorch/ONNX models into an interactive graph with live per-layer sparsity.}
+\resumeItem{Hardware panel reports flash/SRAM fit, inference time, and energy per inference across \textbf{26 embedded targets}, so model fit is known before deployment rather than after.}
+\resumeItemListEnd
+
+\entryGap
+
+\expSubheading
+{Saizen}{Swift, Next.js, Capacitor, AVPlayer, Keychain}{}
+\resumeItemListStart
+\resumeItem{Personal iOS media client whose playback sources are installable modules resolved at runtime -- a broken source ships as a \textbf{module update, not an app release}.}
+\resumeItem{Custom AVPlayer chrome with gesture seeking and skip marks, a resilient pause/resume offline download queue, and OAuth tokens stored in Keychain behind a fail-closed secret scan of every IPA.}
+\resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
 %----------------------------------------------------------------------------------------
-%   PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\resumeSubHeadingListStart
-\resumeItem{\textbf{Suraj Menon} et al., ``NammaLakes: IoT-Based Real-Time Distributed Lakes Monitoring System,'' \textit{International Journal of Latest Technology in Engineering Management and Applied Science}, 2025. \href{https://doi.org/10.51583/IJLTEMAS.2025.1409000060}{[DOI]} \\[2pt]
-\textit{\small Designed a distributed IoT architecture using RabbitMQ and ML-based anomaly detection for real-time water quality monitoring.}}
-\resumeSubHeadingListEnd
-
-%----------------------------------------------------------------------------------------
-%\tCERTIFICATIONS
+%   SKILLS  (every line traces to a bullet or project above)
 %----------------------------------------------------------------------------------------
 
-\section{Certifications}
+\section{Skills}
+
+\textbf{Languages:} Python, TypeScript/JavaScript, SQL, Bash, Swift
+
+\textbf{Frontend:} React, Next.js, Vite, Tailwind CSS, SwiftUI, Recharts
+
+\textbf{Backend \& Infra:} FastAPI, Node.js, REST APIs, RabbitMQ, Kafka, SIP/Voice APIs
+
+\textbf{Data \& Cloud:} PostgreSQL, Amazon Redshift, OpenSearch, Supabase, Firebase, SQLite, MinIO, Vercel
+
+\textbf{AI \& ML:} Gemini API, LLM automation pipelines, Isolation Forest, PyTorch, ONNX
+
+\textbf{Tools:} Git, GitHub Actions, Docker, Prometheus, Grafana, Wireshark, Postman
+
+%----------------------------------------------------------------------------------------
+%   EDUCATION
+%----------------------------------------------------------------------------------------
+
+% TODO: replace "2022 -- 2026" with the exact month once confirmed, e.g. "Jun 2022 -- Jun 2026"
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Dayananda Sagar College of Engineering}{Bengaluru, KA}
+      {B.E. in Information Science \& Engineering (VTU);  CGPA: 8.9}{2022 -- 2026}
+  \resumeSubHeadingListEnd
+
+%----------------------------------------------------------------------------------------
+%   PUBLICATION  (kept honest -- one line, no overselling)
+%----------------------------------------------------------------------------------------
+\section{Publication}
 \resumeSubHeadingListStart
-\resumeItem{\textbf{The Complete Full-Stack Web Development Bootcamp} -- Udemy, 2025  -- \href{https://www.udemy.com/certificate/UC-3c7703b2-28fe-4ae1-a8ed-1ef0133d89b5/}{[View Certificate]}}
+\resumeItem{\textbf{Suraj Menon} et al., ``NammaLakes: IoT-Based Real-Time Distributed Lakes Monitoring System,'' \textit{International Journal of Latest Technology in Engineering Management and Applied Science}, 2025. \href{https://doi.org/10.51583/IJLTEMAS.2025.1409000060}{[DOI]} \href{https://github.com/NammaLakes}{[Source]}}
 \resumeSubHeadingListEnd
 
 \end{document}

@@ -46,7 +46,7 @@ To compile this LaTeX template, you'll need:
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/yourusername/Resume.git
+git clone https://github.com/Surajsm60720/Resume.git
 ```
 
 2. Edit the `cv.tex` file with your personal information, education, skills, projects and certifications.
